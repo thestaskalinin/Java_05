@@ -49,23 +49,19 @@ public class FizzBuzzTest {
     }
 
 
-    @Ignore
     @Test
-    public void testStartLessThanEnd_StartEndEndAreNegative_HappyPath() {
+    public void testStartLessThanEnd_StartEndAreNegative_HappyPath() {
         //AAA
-        //Arrange
+        //arrange
         int start = -20;
         int end = -1;
-        String[] expectedResult = {"Buzz"};
-        ;
+        String[] expectedResult = {"Buzz", "-19", "Fizz", "-17", "-16", "FizzBuzz", "-14", "-13", "Fizz", "-11",
+                "Buzz", "Fizz", "-8", "-7", "Fizz", "Buzz", "-4", "Fizz", "-2", "-1"};
 
-
-        //Act
-
+        //act
         String[] actualResult = new FizzBuzz().fizzBuzz(start, end);
 
         //Assert
-
         Assert.assertEquals(actualResult, expectedResult);
     }
 
